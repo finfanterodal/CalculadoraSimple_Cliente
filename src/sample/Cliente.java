@@ -13,16 +13,19 @@ public class Cliente {
     private DataInputStream dis;
     String result;
 
-    public void clienteConnect(String ip, int puerto) {
+    public boolean clienteConnect(String ip, int puerto) {
+        boolean comp = false;
         clienteSocket = new Socket();
         InetSocketAddress addr = new InetSocketAddress(ip, puerto);
         try {
             clienteSocket.connect(addr);
+            comp = true;
         } catch (IOException e) {
-
+            System.out.println(e.getMessage());
         } catch (Exception e) {
-
+            System.out.println(e.getMessage());
         }
+        return comp;
     }
 
     public String clienteCalcular(String num1, String num2, String operador) {
@@ -39,7 +42,6 @@ public class Cliente {
             dis.read(resultado);
             String[] datos = new String(resultado).split(",");
             result = datos[0];
-
 
         } catch (IOException e) {
             e.printStackTrace();
