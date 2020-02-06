@@ -19,7 +19,9 @@ public class Cliente {
         try {
             clienteSocket.connect(addr);
         } catch (IOException e) {
-            e.printStackTrace();
+
+        } catch (Exception e) {
+
         }
     }
 
