@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0"
+          prefWidth="200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.connectServerController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <children>
+        <VBox>
+            <children>
+                <Label alignment="CENTER" maxHeight="50.0" maxWidth="1.7976931348623157E308" text="Puerto"
+                       textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="19.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="puerto" maxHeight="1.7976931348623157E308" promptText="0000"/>
+                <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="IP Adsress">
+                    <font>
+                        <Font name="System Bold" size="19.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="ip" promptText="000.000.00.00"/>
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#buttonConnect" prefHeight="70.0" text="Connect" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="19.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonDisconnect" prefHeight="70.0"
+                text="Disconnect" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="19.0"/>
+            </font>
+        </Button>
+    </children>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+</GridPane>
